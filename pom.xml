@@ -73,35 +73,21 @@
                 </configuration>
             </plugin>
 
-            <!-- specify main class for exec goal -->
+            <!-- Spring specific build plugin, produces self contained JAR with default launcher class.-->
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <mainClass>eu.kartoffelquadrat.zoo.RestLauncher</mainClass>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>java</goal>
+                            <goal>repackage</goal>
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <mainClass>eu.kartoffelquadrat.zoo.DesktopLauncher</mainClass>
-                </configuration>
-            </plugin>
-
-            <!-- specify main class for JAR manifest-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>eu.kartoffelquadrat.zoo.DesktopLauncher</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
             </plugin>
 
             <!-- add sources -->

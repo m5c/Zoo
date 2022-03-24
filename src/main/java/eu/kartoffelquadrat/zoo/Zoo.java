@@ -1,28 +1,28 @@
 package eu.kartoffelquadrat.zoo;
 
+import org.springframework.web.bind.annotation.*;
+
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Principal class of the Zoo, offering all relevant public functionality. Access to public methods of this implementation
- * is demonstrated in the DesktopLauncher class. This class is a singleton.
+ * Principal class of the Zoo, offering all relevant public functionality. Access to public methods of this
+ * implementation is demonstrated in the DesktopLauncher class.
  *
  * @author Maximilian Schiedermeier
  */
+@RestController
 public class Zoo {
-
-    // Singleton reference
-    private static Zoo SINGLETON_REFERENCE = null;
 
     // private fields for indexed animals and opening hours.
     private final Map<String, Animal> animals;
     private final OpeningHours openingHours;
 
     /**
-     * Private constructor, populates the zoo.
+     * Public constructor, populates the zoo. Invoked by Spring once, to create a REST controller instance.
      */
-    private Zoo() {
+    public Zoo() {
         openingHours = new OpeningHours();
         animals = new LinkedHashMap<>();
         addAnimal("Charly", new Animal("Chimpanzee", 10, "Bananas"));
@@ -31,21 +31,11 @@ public class Zoo {
     }
 
     /**
-     * Singleton patter access method.
-     *
-     * @return the one and only Zoo instance.
-     */
-    public static Zoo getInstance() {
-        if (SINGLETON_REFERENCE == null)
-            SINGLETON_REFERENCE = new Zoo();
-        return SINGLETON_REFERENCE;
-    }
-
-    /**
      * Returns a list with all animal names.
      *
      * @return Collection with the names of all indexed animals.
      */
+    @GetMapping("zoo/animals")
     public Collection<String> getAllAnimalNames() {
         return animals.keySet();
     }
@@ -56,7 +46,8 @@ public class Zoo {
      * @param name as the animals name.
      * @return the animal object associated to this name.
      */
-    public Animal getAnimalDetails(String name) {
+    @GetMapping("zoo/animals/{name}")
+    public Animal getAnimalDetails(@PathVariable("name") String name) {
         return animals.get(name);
     }
 
@@ -66,7 +57,8 @@ public class Zoo {
      * @param name   as the name of the animal to index.
      * @param animal as the characteristics of the animal to add.
      */
-    public void addAnimal(String name, Animal animal) {
+    @PutMapping("zoo/animals/{name}")
+    public void addAnimal(@PathVariable("name") String name, @RequestBody Animal animal) {
         animals.put(name, animal);
     }
 
@@ -75,6 +67,7 @@ public class Zoo {
      *
      * @return the zoo opening hours.
      */
+    @GetMapping("zoo/openinghours")
     public OpeningHours getOpeningHours() {
         return openingHours;
     }
