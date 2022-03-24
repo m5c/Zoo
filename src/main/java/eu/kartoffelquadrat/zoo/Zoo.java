@@ -7,8 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Principal class of the Zoo, offering all relevant public functionality. Access to public methods of this
- * implementation is demonstrated in the DesktopLauncher class.
+ * Principal class of the Zoo, offering all relevant public functionality. Access is exposed via Spring request mappings.
  *
  * @author Maximilian Schiedermeier
  */
