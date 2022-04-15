@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>eu.kartoffelquadrat</groupId>
-    <artifactId>zoo</artifactId>
+    <artifactId>zoorestified</artifactId>
     <packaging>jar</packaging>
     <version>1.0</version>
-    <name>zoointernals</name>
+    <name>zoorestified</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -54,7 +54,7 @@
 
     <build>
         <!-- Override default name of generated jars -->
-        <finalName>Zoo</finalName>
+        <finalName>zoorestified</finalName>
 
         <plugins>
             <!-- set compiler version -->
