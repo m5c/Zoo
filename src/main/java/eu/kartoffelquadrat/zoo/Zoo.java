@@ -45,8 +45,8 @@ public class Zoo {
      * @param name as the animals name.
      * @return the animal object associated to this name.
      */
-    @GetMapping("zoo/animals/{name}")
-    public Animal getAnimalDetails(@PathVariable("name") String name) {
+    @GetMapping("zoo/animals/{animalname}")
+    public Animal getAnimalDetails(@PathVariable("animalname") String name) {
         return animals.get(name);
     }
 
@@ -56,8 +56,8 @@ public class Zoo {
      * @param name   as the name of the animal to index.
      * @param animal as the characteristics of the animal to add.
      */
-    @PutMapping("zoo/animals/{name}")
-    public void addAnimal(@PathVariable("name") String name, @RequestBody Animal animal) {
+    @PutMapping("zoo/animals/{animalname}")
+    public void addAnimal(@PathVariable("animalname") String name, @RequestBody Animal animal) {
         animals.put(name, animal);
     }
 
@@ -70,6 +70,5 @@ public class Zoo {
     public OpeningHours getOpeningHours() {
         return openingHours;
     }
-
 
 }
