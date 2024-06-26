@@ -11,7 +11,7 @@ The codebase offers Zoo related functionality:
  * Listing details for a specific animal (identified by name).
  * Adding an animal.
 
-All this functionality is [offered by a singleton class Zoo](https://kartoffelquadrat.github.io/Zoo/eu/kartoffelquadrat/zoo/Zoo.html).
+All this functionality is [offered by a singleton class Zoo](https://m5c.github.io/Zoo/eu/kartoffelquadrat/zoo/Zoo.html).
 
 ## Usage
 
@@ -22,7 +22,7 @@ To compile / run the Zoo, execute these commands:
 
 ## Documentation
 
- * [GitHub JavaDoc Pages](https://kartoffelquadrat.github.io/Zoo/eu/kartoffelquadrat/zoo/package-summary.html)
+ * [GitHub JavaDoc Pages](https://m5c.github.io/Zoo/eu/kartoffelquadrat/zoo/package-summary.html)
 
 ## License
 
