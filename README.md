@@ -24,3 +24,6 @@ To compile / run the Zoo, execute these commands:
 
  * [GitHub JavaDoc Pages](https://kartoffelquadrat.github.io/Zoo/eu/kartoffelquadrat/zoo/package-summary.html)
 
+## License
+
+This software is under open source [MIT License](LICENSE.txt).
