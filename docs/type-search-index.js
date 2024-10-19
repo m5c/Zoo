@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"eu.kartoffelquadrat.zoo","l":"Animal"},{"p":"eu.kartoffelquadrat.zoo","l":"DesktopLauncher"},{"p":"eu.kartoffelquadrat.zoo","l":"OpeningHours"},{"p":"eu.kartoffelquadrat.zoo","l":"Zoo"}]
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"eu.kartoffelquadrat.zoo","l":"Animal"},{"p":"eu.kartoffelquadrat.zoo","l":"DesktopLauncher"},{"p":"eu.kartoffelquadrat.zoo","l":"OpeningHours"},{"p":"eu.kartoffelquadrat.zoo","l":"Zoo"}];updateSearchResults();

@@ -65,9 +65,9 @@ public class Animal {
     StringBuilder animalStringBuilder = new StringBuilder("");
     animalStringBuilder.append(" (")
         .append(getAge())
-        .append(") ,the ")
+        .append("), the ")
         .append(getSpecies())
-        .append(". He likes ")
+        .append(". They like ")
         .append(getFavouriteFood())
         .append(".");
     return animalStringBuilder.toString();
